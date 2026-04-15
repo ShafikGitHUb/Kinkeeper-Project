@@ -13,10 +13,11 @@ const handleCallbtn = (expectedCard) =>{
   const isExistCard = showCallInfo.find(callInfo => callInfo.id === expectedCard.id);
         
   if(isExistCard){
-    toast.success("Successfully called this person");
+    toast.error("You have already called this person");
   } else{
     setShowCallInfo([...showCallInfo,expectedCard]);
-    toast.error("You have already called this person");
+   
+     toast.success("Successfully called this person");
      return;
   }
 
@@ -25,10 +26,11 @@ const handleCallbtn = (expectedCard) =>{
         
   const isExistCardText = showTextInfo.find(textInfo => textInfo.id === expectedCard.id);
   if(isExistCardText){
-    toast.success("Successfully text this person");
+       toast.error("You have already text this person");
   } else{
     setShowTextInfo([...showTextInfo,expectedCard]);
-   toast.error("You have already text this person");
+
+   toast.success("Successfully text this person");
      return;
   }
   
@@ -38,11 +40,12 @@ const handleVideobtn = (expectedCard)=>{
 
     const isExitVideo = showVideoInfo.find(videoInfo => videoInfo.id === expectedCard.id);
     if(isExitVideo){
-        toast.success("Successfully video called this person");
+            toast.error("You have already video called this person");
     }
     else{
         setShowVideoInfo([...showVideoInfo,expectedCard]);
-        toast.error("You have already video called this person");
+    
+        toast.success("Successfully video called this person");
         return ;
     }
 }

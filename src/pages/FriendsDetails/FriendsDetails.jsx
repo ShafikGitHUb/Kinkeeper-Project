@@ -42,7 +42,7 @@ const {handleCallbtn,handleTextbtn,handleVideobtn} = useContext(ContextProvider)
         <div className='flex flex-col md:flex-row  justify-center items-center gap-4'>   
   <div className="w-full md:w-1/2  items-center text-center space-y-4 ">
 
-<div className='py-7 space-y-1  bg-amber-200 rounded-2xl'>
+<div className='py-7 space-y-1  bg-[#F8FAFC] rounded-2xl'>
           <img
       src={expectedCard.picture}
       alt={expectedCard.name}
@@ -57,13 +57,13 @@ const {handleCallbtn,handleTextbtn,handleVideobtn} = useContext(ContextProvider)
     <p className='text-[#64748B] text-[14px]'>"Former colleague, great mentor"</p> 
     <p className='text-[#64748B]  text=[14px] '>Preferred:{expectedCard.email}</p>
 </div>
-<div className='bg-amber-200 rounded-2xl py-3'>
+<div className='bg-[#F8FAFC] rounded-2xl py-3'>
 <p className='text-center'>Snooze 2 weeks</p>
 </div>
-<div className='bg-amber-200 rounded-2xl py-3'>
+<div className='bg-[#F8FAFC] rounded-2xl py-3'>
 <p className='text-center'>Archive</p>
 </div>
-<div className='bg-amber-200 rounded-2xl py-3'>
+<div className='bg-[#F8FAFC] rounded-2xl py-3'>
 <button className="text-red-600 hover:underline">
   Delete
 </button>
@@ -75,15 +75,15 @@ const {handleCallbtn,handleTextbtn,handleVideobtn} = useContext(ContextProvider)
 <div className='rounded-2xl py-3'>
 
 <div className='flex justify-between items-center gap-2'>
-    <div className='bg-amber-200 px-5 py-8 text-center rounded-2xl w-[32%]'>
+    <div className='bg-[#F8FAFC] px-5 py-8 text-center rounded-2xl w-[32%]'>
     <h2 className='font-bold text-3xl'>62</h2>
     <p className='text-[#64748B] text-[14px]'>Days Since Contact</p>
 </div>
-<div className='bg-amber-200 px-5 py-8 text-center rounded-2xl w-[32%] '>
+<div className='bg-[#F8FAFC] px-5 py-8 text-center rounded-2xl w-[32%] '>
      <h2 className='font-bold text-3xl'>62</h2>
     <p className='text-[#64748B] text-[14px]'>Days Since Contact</p>
 </div>
-<div className='bg-amber-200 px-5 py-8 text-center rounded-2xl w-[32%]'>
+<div className='bg-[#F8FAFC] px-5 py-8 text-center rounded-2xl w-[32%]'>
      <h2 className='font-bold text-3xl'>62</h2>
     <p className='text-[#64748B] text-[14px]'>Days Since Contact</p>
 </div>
@@ -91,7 +91,7 @@ const {handleCallbtn,handleTextbtn,handleVideobtn} = useContext(ContextProvider)
 </div>
 
 
-<div className='bg-amber-200 rounded-2xl py-3 flex justify-between items-center p-4 '>
+<div className='bg-[#F8FAFC] rounded-2xl py-3 flex justify-between items-center p-4 '>
 
 <div>
 <h2>Relationship Goal</h2>
@@ -103,7 +103,7 @@ const {handleCallbtn,handleTextbtn,handleVideobtn} = useContext(ContextProvider)
 
 </div>
 
-<div className='bg-amber-200 rounded-2xl py-3'>
+<div className='bg-[#F8FAFC] rounded-2xl py-3'>
 <h2 className='ml-4'>Quick Check-In</h2>
 <div className='flex  justify-center items-center gap-2 mt-2 mb-2'>
     <button onClick={()=>handleCallbtn(expectedCard)} className="btn btn-soft p-4 lg:p-10 rounded-2xl"><img className='w-5' src={call} alt=""/><p>Call</p>
