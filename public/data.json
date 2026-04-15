@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Arafat Rahman",
+    "picture": "https://randomuser.me/api/portraits/men/90.jpg",
+    "email": "arafat.rahman@example.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["school", "best friend"],
+    "bio": "Childhood friend, still in touch regularly.",
+    "goal": 7,
+    "next_due_date": "2026-04-20"
+  },
+  {
+    "id": 2,
+    "name": "Nusrat Jahan",
+    "picture": "https://randomuser.me/api/portraits/women/21.jpg",
+    "email": "nusrat.jahan@example.com",
+    "days_since_contact": 18,
+    "status": "almost due",
+    "tags": ["university", "study partner"],
+    "bio": "Met during university group project.",
+    "goal": 14,
+    "next_due_date": "2026-04-10"
+  },
+  {
+    "id": 3,
+    "name": "Shakil Ahmed",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "shakil.ahmed@example.com",
+    "days_since_contact": 30,
+    "status": "overdue",
+    "tags": ["work", "colleague"],
+    "bio": "Former office colleague, good friend.",
+    "goal": 14,
+    "next_due_date": "2026-03-28"
+  },
+  {
+    "id": 4,
+    "name": "Mim Akter",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "mim.akter@example.com",
+    "days_since_contact": 9,
+    "status": "on-track",
+    "tags": ["cousin", "family"],
+    "bio": "Cousin sister, talk often during weekends.",
+    "goal": 10,
+    "next_due_date": "2026-04-22"
+  },
+  {
+    "id": 5,
+    "name": "Tanvir Hasan",
+    "picture": "https://randomuser.me/api/portraits/men/55.jpg",
+    "email": "tanvir.hasan@example.com",
+    "days_since_contact": 22,
+    "status": "almost due",
+    "tags": ["gym", "fitness buddy"],
+    "bio": "Gym partner, motivates each other.",
+    "goal": 14,
+    "next_due_date": "2026-04-08"
+  },
+  {
+    "id": 6,
+    "name": "Sadia Islam",
+    "picture": "https://randomuser.me/api/portraits/women/65.jpg",
+    "email": "sadia.islam@example.com",
+    "days_since_contact": 40,
+    "status": "overdue",
+    "tags": ["school", "old friend"],
+    "bio": "School friend, lost contact recently.",
+    "goal": 14,
+    "next_due_date": "2026-03-25"
+  },
+  {
+    "id": 7,
+    "name": "Rafiul Karim",
+    "picture": "https://randomuser.me/api/portraits/men/77.jpg",
+    "email": "rafiul.karim@example.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["tech", "developer friend"],
+    "bio": "Coding buddy, share projects together.",
+    "goal": 7,
+    "next_due_date": "2026-04-18"
+  },
+  {
+    "id": 8,
+    "name": "Nayeem Islam",
+    "picture": "https://randomuser.me/api/portraits/men/81.jpg",
+    "email": "nayeem.islam@example.com",
+    "days_since_contact": 14,
+    "status": "on-track",
+    "tags": ["university", "project mate"],
+    "bio": "Worked together on final year project.",
+    "goal": 14,
+    "next_due_date": "2026-04-25"
+  },
+  {
+    "id": 9,
+    "name": "Farhana Akter",
+    "picture": "https://randomuser.me/api/portraits/women/72.jpg",
+    "email": "farhana.akter@example.com",
+    "days_since_contact": 27,
+    "status": "almost due",
+    "tags": ["friend", "travel buddy"],
+    "bio": "Travelled Cox’s Bazar together.",
+    "goal": 14,
+    "next_due_date": "2026-04-06"
+  },
+  {
+    "id": 10,
+    "name": "Imran Hossain",
+    "picture": "https://randomuser.me/api/portraits/men/90.jpg",
+    "email": "imran.hossain@example.com",
+    "days_since_contact": 60,
+    "status": "overdue",
+    "tags": ["school", "old classmate"],
+    "bio": "School classmate, haven't talked in years.",
+    "goal": 21,
+    "next_due_date": "2026-03-15"
+  }
+]
