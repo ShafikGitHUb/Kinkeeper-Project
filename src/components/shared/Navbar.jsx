@@ -9,7 +9,7 @@ const Navbar = () => {
      }`;
     return (
             <nav className='shadow'>
-      <div className='flex justify-between items-center container mx-auto gap-4 py-2'>
+      <div className='flex justify-between items-center container mx-auto gap-4 py-2 px-2'>
 
         <NavLink to="/">
           <img src={logopng} alt="Logo" />

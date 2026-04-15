@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router';
 import { FadeLoader } from 'react-spinners';
+import call from "../../assets/call.png";
+import text from "../../assets/text.png";
+import video from "../../assets/video.png";
 
 const FriendsDetails = () => {
     const {id} = useParams();
             const [friends, setFriends] = useState([]);
-            const [loading,setLoading] = useState(true)
+            const [loading,setLoading] = useState(true);
+            const [showCallInfo, setShowCallInfo] = useState([]);
     
      useEffect(()=>{
         const fetchData = async()=>{
@@ -19,8 +23,16 @@ const FriendsDetails = () => {
      },[] );
 
      const expectedCard = friends.find((singleCard)=>singleCard.id == id);
+
+
+const handleCallbtn =()=>{
+  setShowCallInfo([...showCallInfo,expectedCard]);
+}
+console.log(showCallInfo);
+
+
     return (
-        <div className="container mx-auto mt-10">
+        <div className="container mx-auto px-2 mt-10">
       {loading ? (
           <div className='flex justify-center items-center col-span-full h-[60vh]'>
             <FadeLoader />
@@ -29,8 +41,8 @@ const FriendsDetails = () => {
       ) : (
         
           
-        <div className='flex justify-center items-center gap-4'>   
-  <div className="w-1/2  items-center text-center space-y-4 ">
+        <div className='flex flex-col md:flex-row  justify-center items-center gap-4'>   
+  <div className="w-full md:w-1/2  items-center text-center space-y-4 ">
 
 <div className='py-7 space-y-1  bg-amber-200 rounded-2xl'>
           <img
@@ -45,7 +57,7 @@ const FriendsDetails = () => {
     {expectedCard.tags?.[1]}
   </div>
     <p className='text-[#64748B] text-[14px]'>"Former colleague, great mentor"</p> 
-    <p className='text-[#64748B] text=[14px]'>Preferred:{expectedCard.email}</p>
+    <p className='text-[#64748B]  text=[14px] '>Preferred:{expectedCard.email}</p>
 </div>
 <div className='bg-amber-200 rounded-2xl py-3'>
 <p className='text-center'>Snooze 2 weeks</p>
@@ -60,43 +72,48 @@ const FriendsDetails = () => {
 </div>
 
   </div>  
-
-
-
-  <div className='w-1/2 space-y-3 '>
+  <div className='w-full md:w-1/2 space-y-3 '>
   
 <div className='rounded-2xl py-3'>
 
-<div className='flex justify-center items-center gap-3'>
-    <div className='bg-amber-200 px-5 py-8 text-center rounded-2xl'>
+<div className='flex justify-between items-center gap-2'>
+    <div className='bg-amber-200 px-5 py-8 text-center rounded-2xl w-[32%]'>
     <h2 className='font-bold text-3xl'>62</h2>
     <p className='text-[#64748B] text-[14px]'>Days Since Contact</p>
 </div>
-<div className='bg-amber-200 px-5 py-8 text-center rounded-2xl '>
+<div className='bg-amber-200 px-5 py-8 text-center rounded-2xl w-[32%] '>
      <h2 className='font-bold text-3xl'>62</h2>
     <p className='text-[#64748B] text-[14px]'>Days Since Contact</p>
 </div>
-<div className='bg-amber-200 px-5 py-8 text-center rounded-2xl'>
+<div className='bg-amber-200 px-5 py-8 text-center rounded-2xl w-[32%]'>
      <h2 className='font-bold text-3xl'>62</h2>
     <p className='text-[#64748B] text-[14px]'>Days Since Contact</p>
 </div>
 </div>
-
-
-
 </div>
 
 
-<div className='bg-amber-200 rounded-2xl py-3'>
-<p className='text-center'>Archive</p>
+<div className='bg-amber-200 rounded-2xl py-3 flex justify-between items-center p-4 '>
+
+<div>
+<h2>Relationship Goal</h2>
+<p>Connect every 30 days</p>
+</div>
+<div>
+  <button className='btn rounded-2xl'>Edit</button>
+</div>
+
 </div>
 
 <div className='bg-amber-200 rounded-2xl py-3'>
-<h2 className='text-center'>Quick Check-In</h2>
-<div className='flex justify-center items-center gap-2'>
-    <button className="btn btn-soft">Default</button>
-<button className="btn btn-soft">Default</button>
-<button className="btn btn-soft">Default</button>
+<h2 className='ml-4'>Quick Check-In</h2>
+<div className='flex  justify-center items-center gap-2 mt-2 mb-2'>
+    <button onClick={handleCallbtn} className="btn btn-soft p-4 lg:p-10 rounded-2xl"><img className='w-5' src={call} alt=""/><p>Call</p>
+    </button> 
+<button className="btn btn-soft p-4 lg:p-10 rounded-2xl"><img className='w-5' src={text} alt=""  /><p>text</p>
+</button>
+<button className="btn btn-soft p-4 lg:p-10 rounded-2xl"><img className='w-5' src={video} alt="" /><p>video</p>
+</button>
 </div>
 </div>
 
