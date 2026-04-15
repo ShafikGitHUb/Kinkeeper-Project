@@ -12,6 +12,7 @@ import Stats from './pages/Stats/Stats';
 import FriendsDetails from './pages/FriendsDetails/FriendsDetails';
 import Context from './context/Context';
 import { ToastContainer } from 'react-toastify';
+import ErrorPage from './pages/ErrorPaGE/ErrorPage';
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
         element:<FriendsDetails></FriendsDetails>
        },
       ],
-      errorElement:<h2>Page Not Found</h2>
+      errorElement:<ErrorPage></ErrorPage>
   },
 ]);
 

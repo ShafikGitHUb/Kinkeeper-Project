@@ -1,13 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router';
+import { Link,  useNavigate,  useParams } from 'react-router';
 import { FadeLoader } from 'react-spinners';
 import call from "../../assets/call.png";
 import text from "../../assets/text.png";
 import video from "../../assets/video.png";
 import { ContextProvider } from '../../context/Context';
 
+
 const FriendsDetails = () => {
     const {id} = useParams();
+    const navigate = useNavigate();
             const [friends, setFriends] = useState([]);
             const [loading,setLoading] = useState(true);
     
@@ -64,7 +66,9 @@ const {handleCallbtn,handleTextbtn,handleVideobtn} = useContext(ContextProvider)
 <p className='text-center'>Archive</p>
 </div>
 <div className='bg-[#F8FAFC] rounded-2xl py-3'>
-<button className="text-red-600 hover:underline">
+<button  onClick={() => {
+    navigate("/");
+  }} className="text-red-600 hover:text-black hover:underline  bg-none hover:bg-amber-100 p-0 hover:px-3 rounded-2xl ">
   Delete
 </button>
 </div>
