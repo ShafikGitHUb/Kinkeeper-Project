@@ -10,6 +10,7 @@ import Homepage from './pages/homepage/Homepage';
 import Timeline from './pages/timeline/Timeline';
 import Stats from './pages/Stats/Stats';
 import FriendsDetails from './pages/FriendsDetails/FriendsDetails';
+import Context from './context/Context';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
- <RouterProvider router={router}/>
+    <Context>
+<RouterProvider router={router}/>
+    </Context>
   </StrictMode>,
 )

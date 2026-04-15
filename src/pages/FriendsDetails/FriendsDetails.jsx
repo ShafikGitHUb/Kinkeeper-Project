@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router';
 import { FadeLoader } from 'react-spinners';
 import call from "../../assets/call.png";
 import text from "../../assets/text.png";
 import video from "../../assets/video.png";
+import { ContextProvider } from '../../context/Context';
 
 const FriendsDetails = () => {
     const {id} = useParams();
             const [friends, setFriends] = useState([]);
             const [loading,setLoading] = useState(true);
-            const [showCallInfo, setShowCallInfo] = useState([]);
+    
     
      useEffect(()=>{
         const fetchData = async()=>{
@@ -24,11 +25,8 @@ const FriendsDetails = () => {
 
      const expectedCard = friends.find((singleCard)=>singleCard.id == id);
 
+const {handleCallbtn,handleTextbtn,handleVideobtn} = useContext(ContextProvider);
 
-const handleCallbtn =()=>{
-  setShowCallInfo([...showCallInfo,expectedCard]);
-}
-console.log(showCallInfo);
 
 
     return (
@@ -108,11 +106,11 @@ console.log(showCallInfo);
 <div className='bg-amber-200 rounded-2xl py-3'>
 <h2 className='ml-4'>Quick Check-In</h2>
 <div className='flex  justify-center items-center gap-2 mt-2 mb-2'>
-    <button onClick={handleCallbtn} className="btn btn-soft p-4 lg:p-10 rounded-2xl"><img className='w-5' src={call} alt=""/><p>Call</p>
+    <button onClick={()=>handleCallbtn(expectedCard)} className="btn btn-soft p-4 lg:p-10 rounded-2xl"><img className='w-5' src={call} alt=""/><p>Call</p>
     </button> 
-<button className="btn btn-soft p-4 lg:p-10 rounded-2xl"><img className='w-5' src={text} alt=""  /><p>text</p>
+<button onClick={()=>handleTextbtn(expectedCard)} className="btn btn-soft p-4 lg:p-10 rounded-2xl"><img className='w-5' src={text} alt=""  /><p>text</p>
 </button>
-<button className="btn btn-soft p-4 lg:p-10 rounded-2xl"><img className='w-5' src={video} alt="" /><p>video</p>
+<button onClick={()=>handleVideobtn(expectedCard)} className="btn btn-soft p-4 lg:p-10 rounded-2xl"><img className='w-5' src={video} alt="" /><p>video</p>
 </button>
 </div>
 </div>
