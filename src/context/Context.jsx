@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react';
+import { toast } from 'react-toastify';
 
 export const ContextProvider = createContext();
 
@@ -12,10 +13,10 @@ const handleCallbtn = (expectedCard) =>{
   const isExistCard = showCallInfo.find(callInfo => callInfo.id === expectedCard.id);
         
   if(isExistCard){
-    alert("Already Card add");
+    toast.success("Successfully called this person");
   } else{
     setShowCallInfo([...showCallInfo,expectedCard]);
-    alert("Add 1st time Call");
+    toast.error("You have already called this person");
      return;
   }
 
@@ -24,10 +25,10 @@ const handleCallbtn = (expectedCard) =>{
         
   const isExistCardText = showTextInfo.find(textInfo => textInfo.id === expectedCard.id);
   if(isExistCardText){
-    alert("Already Text add");
+    toast.success("Successfully text this person");
   } else{
     setShowTextInfo([...showTextInfo,expectedCard]);
-   alert("Add 1st time Text");
+   toast.error("You have already text this person");
      return;
   }
   
@@ -37,11 +38,11 @@ const handleVideobtn = (expectedCard)=>{
 
     const isExitVideo = showVideoInfo.find(videoInfo => videoInfo.id === expectedCard.id);
     if(isExitVideo){
-        alert("Already Video Addd");
+        toast.success("Successfully video called this person");
     }
     else{
         setShowVideoInfo([...showVideoInfo,expectedCard]);
-        alert("Add 1st time Video");
+        toast.error("You have already video called this person");
         return ;
     }
 }
