@@ -8,6 +8,7 @@ const Context = ({children}) => {
      const [showTextInfo, setShowTextInfo] = useState([]);
      const [showVideoInfo, setShowVideoInfo] = useState([]);
 
+
 const handleCallbtn = (expectedCard) =>{
         
   const isExistCard = showCallInfo.find(callInfo => callInfo.id === expectedCard.id);
@@ -54,7 +55,7 @@ const handleVideobtn = (expectedCard)=>{
  
 
 
-    return <ContextProvider.Provider value={{handleCallbtn,showCallInfo,showTextInfo,showVideoInfo,handleTextbtn,handleVideobtn}}>
+    return <ContextProvider.Provider value={{handleCallbtn,showCallInfo,showTextInfo,showVideoInfo,handleTextbtn,handleVideobtn,}}>
         {children}
         </ContextProvider.Provider>
 };

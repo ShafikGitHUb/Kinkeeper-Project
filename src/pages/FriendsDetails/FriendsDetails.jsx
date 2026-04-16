@@ -27,7 +27,7 @@ const FriendsDetails = () => {
 
      const expectedCard = friends.find((singleCard)=>singleCard.id == id);
 
-const {handleCallbtn,handleTextbtn,handleVideobtn} = useContext(ContextProvider);
+const {handleCallbtn,handleTextbtn,handleVideobtn,} = useContext(ContextProvider);
 
 
 
