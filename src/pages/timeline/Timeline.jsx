@@ -78,8 +78,8 @@ const Timeline = () => {
 
         <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-10 w-52 p-2 shadow-sm">
 
-  
-          <li onClick={() => setSorting("")}><a>All</a></li>
+   
+          <li onClick={() => setSorting("")}><a>All</a></li> 
 
   
           <li onClick={() => setSorting("call")}><a>Call</a></li>
